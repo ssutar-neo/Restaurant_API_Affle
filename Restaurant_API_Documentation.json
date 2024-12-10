@@ -1,0 +1,104 @@
+{
+    "info": {
+        "_postman_id": "066a45dd-74a8-4554-828b-4570cb6f054b",
+        "name": "Restaurant_Api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        
+		/* Provide valid latitude and longitude which is not included in CSV - Return Empty Response */
+		{
+            "name": "http://localhost:8000/api/restaurants/?latitude=48.023495&longitude=7.858444699999999&page=2",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/api/restaurants/?latitude=52.5018668&longitude=18.3254556",
+                    "query": [
+                        {
+                            "key": "latitude",
+                            "value": "52.5018668"
+                        },
+                        {
+                            "key": "longitude",
+                            "value": "18.3254556"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "restaurants"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        
+		/* Provide valid latitude and longitude and get nearest stores  */
+		{
+            "name": "http://127.0.0.1:8000/api/users/register/",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/api/restaurants/?latitude=48.023495&longitude=7.858444699999999",
+                    "query": [
+                        {
+                            "key": "latitude",
+                            "value": "48.023495"
+                        },
+                        {
+                            "key": "longitude",
+                            "value": "7.858444699999999"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "restaurants"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+                
+            }
+        },
+        
+		/* Provide Invalid latitude and longitude  - Check for Error Message*/
+		{
+            "name": "http://localhost:8000/api/restaurants/?latitude=200.0&longitude=-300.0",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8000/api/restaurants/?latitude=200.0&longitude=-300.0",
+                    "query": [
+                        {
+                            "key": "latitude",
+                            "value": "200.0"
+                        },
+                        {
+                            "key": "longitude",
+                            "value": "-300.0"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "restaurants"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        }
+    ]
+}
