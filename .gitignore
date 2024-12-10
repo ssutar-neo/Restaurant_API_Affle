@@ -1,0 +1,5 @@
+__pycache__/
+db.sqlite3
+archive/restaurant_*.csv
+download/takehome.csv
+migrations/
